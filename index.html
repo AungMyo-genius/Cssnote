@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Exam note</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#1">cssIntro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#2">externalStyle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#3">textstyle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#4">divDesign</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#5">fontstyle</a>
+        </li>
+    </div>
+  </nav>
+  
+        <div class="container">
+          <h2 id="1">Cssintro</h2>
+          <pre>
+CSS 3 style 
+1. internal style   
+2. external style   
+3. inline style
+
+selectors{
+    property:value;
+    property:value;
+}
+
+Internal style must be between head and body 
+type=text/css must be include in link tag
+selector{
+    properties:"When space"; 
+}
+
+Inline use style="color:red;" in html tag as attribute
+
+/* This is comment in css */
+/* override is worked in only same properties and work as waterfall */
+/* External Style must be between head tag and body tag */
+/* type="text/css" must add */
+/* rel="stylesheet" is important to link css */
+/* <link rel="stylesheet" href="cssintro.css" type="text/css" />  */
+
+
+
+          </pre>
+          <hr>
+          <h2 id="2">ExternalStyle</h2>
+          <pre>
+Element Selector
+
+Single Selector
+Group Selecors = p , p 
+
+Group Selectors 
+h1, h2, h3, h4{
+    color:burlywood;
+}
+
+ID selectors 
+#car, #ship{
+    color:crimson;
+}
+
+Class Selectors
+.ph {
+    color:skyblue
+}
+.f20 {
+    font-size: 20px;
+}
+.divone, .divtwo{
+    color:darkgreen;
+}
+
+# is used to call id selector
+. is used to call class selector
+          </pre>
+          <hr>
+          <h2 id="3">TextStyle</h2>
+          <pre>
+.textalign{
+    text-align: right;
+    text-align: left; 
+    text-align: center; 
+    text-align: justify;
+}
+.textdecoration{
+    <!-- text-decoration: underline; <u> -->
+    <!-- text-decoration: line-through;  <del>  -->
+    text-decoration: overline;    
+    text-decoration: none; 
+}
+.textline{
+    letter-spacing: 5px; 
+    line-height: 50px; 
+    line-height: 3; 3 for 3 world line 
+    line-height: 300%; /*100% is default . So 300% = 3 
+}
+.textshadow{
+    horizontal vertical blur color
+    text-shadow: 5px 5px 5px crimson;
+}
+          </pre>
+<hr>
+<h2 id="4">DivDesign</h2>
+<pre>
+  background
+
+   width
+   height
+   opactiy
+   
+   background
+   background-color
+   background-image:url(); 
+
+   background-repeat: no-repeat; 
+   background-repeat: repeat-x;
+   background-repeat: repeat-y;
+
+   background-color: is soild color but background-image work with gradient; 
+   background-color က soild color တစ်ခုရ  gradient မှာ မရ
+   background က soild ရော gradient ရော ရ
+   background-image က gradient ဘဲရ soild မရ 
+
+   Liner Gradient 
+   background: linear-gradient(blue,orange,cyan,red); for four color 
+   liner-gradient also work with rgba and hexa code.
+   Does not work with background-color.
+   Linear-Gradient မှာ % ရော degree ရောရ 
+
+   background: linear-gradient(180deg, red,green); with degree 
+   180 deg is default 
+   Xdeg is used for position change
+
+   background:linear-gradient(red 40%, cyan 40%);  with % (after 80% blur start to appear)
+
+   Radial Gradient 
+   background:radial-gradient(crimson, cyan);    
+   #39a6a3 or rgba also work 
+   radial-gradient does not have degree.
+   Does not work with background-color.
+   Radial-Gradient မှာ % တစ်ခုဘဲရ 
+
+
+   Background-image and background with gradient
+   background-image: linear-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
+   background: linear-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
+</pre>
+
+        </div>
+</body>
+</html>
