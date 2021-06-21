@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="exam.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -31,7 +31,8 @@
   </nav>
   
         <div class="container">
-          <h2 id="1">Cssintro</h2>
+          <br id="1"><br><br>
+          <h2>Cssintro</h2>
           <pre>
 CSS 3 style 
 1. internal style   
@@ -51,18 +52,19 @@ selector{
 
 Inline use style="color:red;" in html tag as attribute
 
-/* This is comment in css */
-/* override is worked in only same properties and work as waterfall */
-/* External Style must be between head tag and body tag */
-/* type="text/css" must add */
-/* rel="stylesheet" is important to link css */
-/* <link rel="stylesheet" href="cssintro.css" type="text/css" />  */
+This is comment in css 
+override is worked in only same properties and code work as waterfall 
+External Style must be between head tag and body tag 
+type="text/css" should add in link tag
+rel="stylesheet" must add in link tag
+<link rel="stylesheet" href="cssintro.css" type="text/css" />  */
 
 
 
           </pre>
           <hr>
-          <h2 id="2">ExternalStyle</h2>
+          <br id="2"><br><br>
+          <h2>ExternalStyle</h2>
           <pre>
 Element Selector
 
@@ -94,7 +96,8 @@ Class Selectors
 . is used to call class selector
           </pre>
           <hr>
-          <h2 id="3">TextStyle</h2>
+          <br id="3"><br><br>
+          <h2>TextStyle</h2>
           <pre>
 .textalign{
     text-align: right;
@@ -120,52 +123,46 @@ Class Selectors
 }
           </pre>
 <hr>
-<h2 id="4">DivDesign</h2>
+<br id="4"><br><br>
+<h2>DivDesign</h2>
 <pre>
   background
 
-   width
-   height
-   opactiy
-   
-   background
-   background-color
-   background-image:url(); 
+   divကို အနံအလျားသတ်မှတ်ရန်သုံး 
+   width:20px;
+   height:20px;
 
-   background-repeat: no-repeat; 
+   opactiy:1;                       အလင်းအမှောင်ချိန်ရန်သုံး
+   
+   background:red;                  solid color, gradient color, image တွေသုံးလို့ရ              
+   background-color                 solid color
+   background-image:url();          image
+
+   background-repeat: no-repeat;    ပုံတွေမထပ်ရန်သုံး
    background-repeat: repeat-x;
    background-repeat: repeat-y;
 
-   background-color: is soild color but background-image work with gradient; 
-   background-color က soild color တစ်ခုရ  gradient မှာ မရ
-   background က soild ရော gradient ရော ရ
-   background-image က gradient ဘဲရ soild မရ 
+   (background-color)               က soild color တစ်ခုရ  gradient မှာ မရ
+   (background)                     က soild ရော gradient ရော ရ
+   (background-image)               က gradient ဘဲရ soild မရ 
 
    Liner Gradient 
-   background: linear-gradient(blue,orange,cyan,red); for four color 
-   liner-gradient also work with rgba and hexa code.
-   Does not work with background-color.
+   background: linear-gradient(blue,orange,cyan,red); 
+
    Linear-Gradient မှာ % ရော degree ရောရ 
-
    background: linear-gradient(180deg, red,green); with degree 
-   180 deg is default 
-   Xdeg is used for position change
-
    background:linear-gradient(red 40%, cyan 40%);  with % (after 80% blur start to appear)
 
    Radial Gradient 
    background:radial-gradient(crimson, cyan);    
-   #39a6a3 or rgba also work 
-   radial-gradient does not have degree.
-   Does not work with background-color.
    Radial-Gradient မှာ % တစ်ခုဘဲရ 
+   background:radial-gradient(crimson, cyan); 
 
-
-   Background-image and background with gradient
+   Image မှာ gradient ထည့်တာ   Background and Background-image ကိုသုံးရ  background-color မှာမရ
    background-image: linear-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
-   background: linear-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
+   background: radial-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
 </pre>
 
-        </div>
+</div>
 </body>
 </html>
