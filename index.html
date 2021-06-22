@@ -19,7 +19,7 @@
           <a class="nav-link" href="#2">Selectors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#3">TextStyle</a>
+          <a class="nav-link" href="#3">Font & Text</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#4">DivDesign</a>
@@ -49,15 +49,16 @@ CSS 3 style
 2. external style   
 3. inline style
 
-Internal style
+<b>Internal style</b>
 Internal Style ကို head tag နှင့် body tag ကြားမှာ style tag ဖြင့်ထည့်ရေးပါတယ်
 <!-- example    <style type=text/css> p{color:blue;}</style> -->
 type=text/css  ကိုထည့်ရေးသင့်ပါတယ်။
 
-Inline style 
+<b>Inline style</b>
 Inline style ကို html tag တွေထဲမှာ attribute အဖြစ်ရေးလေ့ရှိပါတယ်။
 <!-- <p style="color:blue;"></p> -->
 
+<b>External Style</b>
 External Style ကိုတော့ head tag ထဲမှာ ထည့်ရေးလေ့ရှိပါတယ်။
 <!-- <head>
     <title>CSS intro</title>
@@ -85,20 +86,20 @@ CSS တွင် ကွန်မန့်ပိတ်နည်း အစ /*   �
 <pre>
 Selectors
 
-Element Selector
+<b>Element Selector</b>
 p, div....etc
 HTML tag name ကို တိုက်ရိုက်ခေါ်သုံးတာကို Element Selector လို့ခေါ်တယ်
 p{
     font-size:20px;
 }
 
-Single Selector
+<b>Single Selector</b>
 တစ်ခုတည်း select လုပ်ထားတာကို ခေါ်ပါတယ်
 p{
     color:red;
 }
 
-Group Selecors (p , p)
+<b>Group Selecors (p , p)</b>
 တူညီ တဲ့ style ရှိစေချင်တာကြောင့် အတူ တကွ select လုပ်ပေးတာကို Group Selector လို့ခေါ်ပါတယ်။
 p, p {
     color:red;
@@ -107,7 +108,7 @@ h1, h2, h3, h4{
     color:burlywood;
 }
 
-ID selectors 
+<b>ID selectors</b>
 ID ကနေ select လုပ်။ # sign လေးက ID အတွက် မဖြစ်မနေ လိုအပ်
 #car{
     color:crimson;
@@ -116,7 +117,7 @@ ID ကနေ select လုပ်။ # sign လေးက ID အတွက် မ�
     color:black;
 }
 
-Class Selectors
+<b>Class Selectors</b>
 Class ကနေ select လုပ်။ . sign လေးက Class အတွက် မဖြစ်မနေ လိုအပ်
 .ph {
     color:skyblue
@@ -128,6 +129,214 @@ Class ကနေ select လုပ်။ . sign လေးက Class အတွက်
     color:darkgreen;
 }
 
+<b>Universal Selector</b>
+*{
+   cursor:pointer;
+}
+
+<b>Attribute selector</b>
+input[type="text"]{
+    background-color: greenyellow;
+    width: 300px;
+    border-radius: 20px;
+}
+input[type]{
+    color:blue;
+}
+
+<b>PseudoClass selector</b>
+Pseudoclass selector ရဲ့ sign က ( : )
+:active                                     နှိပ်လိုက်တဲ့အချိန်မှာ style ပြောင်းစေချင်ရင်သုံး 
+:hover                                      mouse တင်လိုက်တဲ့အချိန်မှာ style ပြောင်းစေချင်ရင်သုံး 
+:focus                                      
+:visited                                    သွားပြီးသား နှိပ်ပြီးသွား link တွေ style ပြောင်းစေချင်ရင်သုံး 
+:first-child                                parent အထဲက first child ကို select လုပ်
+:last-child                                 parent အထဲက last child ကို select လုပ်
+:first-of-type                              parent အထဲက first ပထမဆုံး သက်ဆိုင်ရာ Type ကို select လုပ်
+:last-of-type                               parent အထဲက last နောက်ဆုံး သက်ဆိုင်ရာ Type ကို select လုပ်
+
+eg a:active, div1:first-child 
+
+:nth-of-type() vs :nth-child() . They look same but they are different.
+nth-last-child က select လုပ်ထားတဲ့ type ဖြစ်တဲ့ .div1 နဲ့ ရေတွက်ပြီး
+:nth-child() ကတော့ ရှိမျှကို child အဖြစ်သတ်မှတ်ပြီး ရေတွက်ပါတယ်
+
+exam မှာ PseudoClass : or PseudoElement :: လားဆိုပြီးခွဲခိုင်းပါမယ် 
+
+<b>PseudoElement</b>
+::first-line                                ပထမဆုံးစာကြောင်း select လုပ် style ပြောင်းစေချင်ရင်သုံး 
+::first-letter                              ပထမဆုံး အစစာလုံး select လုပ် style ပြောင်းစေချင်ရင်သုံး
+::before{                                   select လုပ်ထားတဲ့ စာပိုဒ် အစ 
+    content: ""; 
+}
+::after{                                    select လုပ်ထားတဲ့ စာပိုဒ် နောက်ဆုံး
+    content: ""; 
+}
+::selection                                 mouse select ဆွဲရင် အရောင်ပြောင်းရန်သုံး                                 
+
+before ကိုစာအကြောင်းအရှေ့မှာ စာထည့်မယ်ဆိုသုံး 
+before ဆိုတာနဲ့ content ပါကိုပါရမယ်  ထည့်စရာမရှိတောင် content:""; 
+
+<b>Combinator</b>
+There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+
+<b>Descendant selector (space)</b>
+The descendant selector matches all elements that are descendants of a specified element.
+<!-- The following example selects all <p> elements inside <div> elements: 
+    div p {
+            background-color: yellow;
+          }
+
+    .bank .money .currency{
+            color:blueviolet;
+          }   
+-->
+
+<b>Child Selector (>)</b>
+The child selector selects all elements that are the children of a specified element.
+<!-- The following example selects all <p> elements that are children of a <div> element: -->
+Example
+div > p {
+  background-color: yellow;
+}
+
+Descendant selector (space) နှင့် Child Selector (>) က မတူပါဘူး
+Descendant selector က select ယူထားတဲ့ သူအောက်မှာ ရှိတဲ့ element ကိုအကုန်ယူမှာပါ 
+Child Selector ကတော့ သူအောက်တည့်တည့်က child ကိုဘဲ ယူမှာပါ
+
+<!-- eg 
+<div>
+    <p>I am p1</p>
+    <span><p>I am p2</p></span>
+</div> -->
+
+div p{color:red;}                div အောက်က I am p1 ရော I am p2ပါ အကုန် နီသွားမှာပါ span tag ထဲက p ပါနီမှာပါ
+div > p{color:red;}              div အောက်တည့်တည့်က I am p1 တစ်ခုဘဲ နီပြီး I am p2 တော့ နီမှာ မဟုတ်ပါဘူး 
+
+<b>Adjacent Sibling Selector (+)</b>
+The adjacent sibling selector is used to select an element that is directly after another specific element.
+Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+<!-- The following example selects the first <p> element that are placed immediately after <div> elements: -->
+
+Example
+div + p {
+  background-color: yellow;
+}
+div ဘေးနားကပ်ရပ် ကောင်ကိုဘဲ  yellow ဝင်စေမှာဖြစ်မှာပါ
+
+<b>General Sibling Selector (~)</b>
+The general sibling selector selects all elements that are next siblings of a specified element.
+<!-- The following example selects all <p> elements that are next siblings of <div> elements:  -->
+Example
+div ~ p {
+  background-color: yellow;
+}
+div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြစ်ပါတယ်
+</pre>
+
+<hr>
+<br id="3"><br>
+<h2>Font & Text</h2>
+<a type="button" class="btn btn-primary" href="#textalign">Text-align</a>
+<a type="button" class="btn btn-primary" href="#textdec">Text-decoration</a>
+<a type="button" class="btn btn-primary" href="#letter-spacing">Letter-spacing</a>
+<a type="button" class="btn btn-primary" href="#lh">Line-height</a>
+<a type="button" class="btn btn-primary" href="#ts">Text-shadow</a>
+<a type="button" class="btn btn-primary" href="#fs">Font-size</a>
+<a type="button" class="btn btn-primary" href="#f">Font link</a>
+<a type="button" class="btn btn-primary" href="#fw">Font-weight</a>
+<a type="button" class="btn btn-primary" href="#ti">Text-indent</a>
+<a type="button" class="btn btn-primary" href="#tf">Text-transform</a>
+<a type="button" class="btn btn-primary" href="#fst">Font-style</a>
+<a type="button" class="btn btn-primary" href="#fv">Font-variant</a>
+<a type="button" class="btn btn-primary" href="#fv">List-style</a>
+<br id="textalign"><br id="textdec">
+<pre>
+    
+    <b>Text-align</b>
+    text-align: right;
+    text-align: left;
+    text-align: center; 
+    text-align: justify;
+    
+    <b id="letter-spacing">Text-decoration</b>
+    text-decoration: underline; 
+    text-decoration: line-through;  
+    text-decoration: overline;    
+    text-decoration: none; 
+    
+    <b id="lh">Letter-spacing</b>
+    letter-spacing: 5px;
+    
+    <b id="ts">Line-height</b>
+    line-height: 50px; 
+    line-height: 3; 3 for 3 world line
+    line-height: 300%; 100% is default  300% = 3 
+   
+    
+    <b id="fs">Text-shadow</b>
+    text-shadow: 5px 5px 5px crimson;
+                  h   v   b     c      horizontal vertical blur color 
+
+    <b id="f">Font-size</b>
+    font-size:20px;   
+    
+    <b>Font link</b>
+    Local Machine Integrate
+    Google Font API 
+    Google Font Local Integrate
+
+    <b>Local Machine Integrate</b> 
+    font-family: Arial, Helvetica, sans-serif;  ဆိုပြီးတန်းခေါ်သုံးလို့ရ   စက်ထဲမှာ ရှိတဲ့ font ကို အစဉ်လိုက်ဖော်ပြပေး
+
+    <b>Google Font API</b> 
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap'); ကို ခေါ်ထည့်ပြီးမှ
+    font-family: 'Roboto', sans-serif;          သုံးလို့ရ 
+
+    <b>Google Font Local Integrate</b>
+    @font-face{
+        font-family: abc;                       font-family နာမည်ကိုကြိုက်တာပေးလို့ ရ 
+        src:local("Stick-Regular"),url(../libs/fonts/stick/Stick-Regular.ttf) format('woff');
+        /* format('woff') does not need anymore */
+    }
+    local() က root ထဲက သုံးမဲ့font file name, url() အထဲမှာ root လမ်းကြောင်းထည့်ပေးရ, format('woff') ကအခုနောက်ပိုင်းမထည့်လည်းရ ထည့်လည်းရ
+
+    .p1{
+        font-family: abc;                       @font-faceထဲက နာမည်ပေးထားတာကိုခေါ်သုံးရ 
+    }
+
+    sans-serif                        က font name မဟုတ် unit တစ်ခုသာဖြစ်
+     
+    <b id="fw">Font-weight</b>
+    font-weight: bold;                font တွေ စာလုံး ထူမထူ စေရန်သုံး  100 to 900 အထိရှိ   bold တို့ light တို့လည်းပေးလို့ရ 
+
+    <b id="ti">Text-indent</b>
+    text-indent: 50px;                keyboard မှာ tab ခုန်ရန်သုံး       50px က 
+
+    <b id="tf">Text-transform</b>
+    text-transform: uppercase;        font တွေကို အကြီးအသေး သုံး  uppercase, lowercase, capitalize
+
+    <b id="fst">Font-style</b>
+    font-style:italic;                font တွေကို italic underline line-through etc လို style တွေထည့်ရာတွင်သုံး
+
+    <b id="fv">font-variant</b>
+    font-variant: small-caps;         font လေးတွေ ပြောင်းလဲသွား နဂိုနဲ့မတူဘဲ အစစာလုံးလေးက နည်းနည်းမြင့်သွား
+
+    <b>List-style</b>
+    List-style-type များ  
+    list-style-type: square; 
+    list-style-type: circle;
+    list-style-type: none;                                  list-style:none; နဲ့လည်းတူ
+    list-style-type: decimal;                               html မှာ ul list ဖြစ်နေတောင် css list-style-type:decimal ဆို ol သကဲ့သို့ number ဖြင့်ဖော်ပြ
+    list-style-type: decimal-leading-zero;                  number ကို zero ကနေ စပြီးဖော်ပြ
+
+    list-style-position: outside; outside is default; 
+    list-style-position: inside;                            list-style-position inside က style သက်ရောက်မှုရှိရန်သုံး  ပိုမိုသိသာစေရန် ဆရာနှင့်ရေးထားတာကိုစမ်းကြည့်ပါ
 </pre>
 
 </div>
