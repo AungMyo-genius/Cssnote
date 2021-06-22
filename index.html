@@ -22,13 +22,13 @@
           <a class="nav-link" href="#3">Font & Text</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#4">DivDesign</a>
+          <a class="nav-link" href="#4">Color & Background</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#5">FontStyle</a>
+          <a class="nav-link" href="#5">Divdesign & border</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#6">BorderStyle</a>
+          <a class="nav-link" href="#6">Position & Flex</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#7">PseudoClass</a>
@@ -244,7 +244,7 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
 <h2>Font & Text</h2>
 <a type="button" class="btn btn-primary" href="#textalign">Text-align</a>
 <a type="button" class="btn btn-primary" href="#textdec">Text-decoration</a>
-<a type="button" class="btn btn-primary" href="#letter-spacing">Letter-spacing</a>
+<a type="button" class="btn btn-primary" href="#lsp">Letter-spacing</a>
 <a type="button" class="btn btn-primary" href="#lh">Line-height</a>
 <a type="button" class="btn btn-primary" href="#ts">Text-shadow</a>
 <a type="button" class="btn btn-primary" href="#fs">Font-size</a>
@@ -252,9 +252,9 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
 <a type="button" class="btn btn-primary" href="#fw">Font-weight</a>
 <a type="button" class="btn btn-primary" href="#ti">Text-indent</a>
 <a type="button" class="btn btn-primary" href="#tf">Text-transform</a>
-<a type="button" class="btn btn-primary" href="#fst">Font-style</a>
-<a type="button" class="btn btn-primary" href="#fv">Font-variant</a>
-<a type="button" class="btn btn-primary" href="#fv">List-style</a>
+<a type="button" class="btn btn-primary" href="#tf">Font-style</a>
+<a type="button" class="btn btn-primary" href="#tf">Font-variant</a>
+<a type="button" class="btn btn-primary" href="#tf">List-style</a>
 <br id="textalign"><br id="textdec">
 <pre>
     
@@ -263,14 +263,14 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
     text-align: left;
     text-align: center; 
     text-align: justify;
-    
-    <b id="letter-spacing">Text-decoration</b>
+    <span id="textdec"></span>
+    <b>Text-decoration</b>
     text-decoration: underline; 
-    text-decoration: line-through;  
-    text-decoration: overline;    
+    text-decoration: line-through;  <span id="lsp"></span>
+    text-decoration: overline;      <span id="lh"></span>
     text-decoration: none; 
     
-    <b id="lh">Letter-spacing</b>
+    <b>Letter-spacing</b>
     letter-spacing: 5px;
     
     <b id="ts">Line-height</b>
@@ -309,16 +309,17 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
     .p1{
         font-family: abc;                       @font-faceထဲက နာမည်ပေးထားတာကိုခေါ်သုံးရ 
     }
-
+    <span id="fw"></span>
     sans-serif                        က font name မဟုတ် unit တစ်ခုသာဖြစ်
+    font-family: inherit;             inherit က parent ဆီကနေ font ကိုယူသုံး
      
-    <b id="fw">Font-weight</b>
+    <b>Font-weight</b> <span id="ti"></span>
     font-weight: bold;                font တွေ စာလုံး ထူမထူ စေရန်သုံး  100 to 900 အထိရှိ   bold တို့ light တို့လည်းပေးလို့ရ 
 
-    <b id="ti">Text-indent</b>
+    <b>Text-indent</b> <span id="tf"></span>
     text-indent: 50px;                keyboard မှာ tab ခုန်ရန်သုံး       50px က 
 
-    <b id="tf">Text-transform</b>
+    <b>Text-transform</b>
     text-transform: uppercase;        font တွေကို အကြီးအသေး သုံး  uppercase, lowercase, capitalize
 
     <b id="fst">Font-style</b>
@@ -338,7 +339,204 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
     list-style-position: outside; outside is default; 
     list-style-position: inside;                            list-style-position inside က style သက်ရောက်မှုရှိရန်သုံး  ပိုမိုသိသာစေရန် ဆရာနှင့်ရေးထားတာကိုစမ်းကြည့်ပါ
 </pre>
+<hr>
+<br id="4"><br>
+<h2>Color and Background</h2>
+<a type="button" class="btn btn-primary" href="#cbbg">Background, Background-color, Background-image</a>
+<a type="button" class="btn btn-primary" href="#cblg">Linear Gradient</a>
+<a type="button" class="btn btn-primary" href="#cbrg">Radial Gradient</a>
+<a type="button" class="btn btn-primary" href="#cbco">Solid Color</a>
+<a type="button" class="btn btn-primary" href="#cbv">Variable</a>
 
+<br id="cbbg"><br>
+<pre>
+    
+    
+   <b>Background</b>
+   background                                       solid color, gradient color, image တွေသုံးလို့ရ              
+   background-color                                 solid color
+   background-image:url()                           gradient color, image
+
+   background-repeat: no-repeat;                    ပုံတွေမထပ်ရန်သုံး
+   background-repeat: repeat-x;
+   background-repeat: repeat-y;
+
+   background-size:cover;                           size တွင်ပုံအပြည့်ဖော်ပြရန်သုံး
+
+   background-position: center;                     center center  
+   background-position: right;                      center right
+   background-position: left;                       center left 
+   background-position: top;                        center top
+   background-position: bottom;                     center bottom
+   background-position: right center;                              
+   background-position: right bottom;  
+   background-position: left bottom; 
+   background-position: left top;                   default
+   <span id="cblg"></span>
+   background-position-x                            x ဝင်ရိုးပေါ်တွင်ရွှေ့ရန်သုံး 
+   background-position-y                            y ဝင်ရိုးပေါ်တွင်ရွှေ့ရန်သုံး 
+
+
+   Image မှာ gradient ထည့်တာ   Background and Background-image ကိုသုံးရ  background-color မှာမရ
+   background-image: linear-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
+   background: radial-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
+
+   <b id="cbrg">Liner Gradient</b>
+   background: linear-gradient(blue,orange,cyan,red); 
+
+   Linear-Gradient မှာ % ရော degree ရောရ 
+   background: linear-gradient(180deg, red,green); with degree 
+   background:linear-gradient(red 40%, cyan 40%);  with % (after 80% blur start to appear)
+
+   <b id="cbcg">Radial Gradient</b>
+   background:radial-gradient(crimson, cyan);    
+   Radial-Gradient မှာ % တစ်ခုဘဲရ 
+   background:radial-gradient(crimson, cyan); 
+
+   <b>Conic Gradient</b>
+   background:conic-gradient(
+	yellow 30%,
+	red 0 50%,
+	green 0 90%,
+	pink 0 100%
+	);
+
+    <span id="cbco"></span>
+    Conic-gradient မှာ                                            deg မရှိ , 0 ရှိ,  %ရှိ
+    linear-gradient မှာ                                           deg ရှိ  , 0 မရှိ, %ရှိ
+    radial-gradient မှာ                                           deg မရှိ , 0 မရှိ, %ရှိ
+    
+    <b id="cbv">Solid Color</b>
+    Color with hexacode = #454545                                         
+    Color with rgba     = rgba(0,0,0,1)                          Optacity ကို select လုပ်ထားသော နေရာတစ်ဘဲကွပ်ဖြစ်စေချင်လျှင် rgba ကိုသုံးသည်
+    opactiy:1;                                                   select လုပ်ထားသော နေရာအကုန်လုံး အတွက်သုံးသည်
+
+    <b>Variable</b>
+    Css တွင် variable သတ်မှတ်ရန် :root ဖြင့်သုံးရပြီး ပြန်ခေါ်သုံးလိုလျှင် var(--white)
+    :root{
+        --white:#fff;
+    }
+    P{
+        color:var(--white);
+    }
+</pre>
+
+<hr>
+<br id="5"><br>
+<h2>Divdesign & border</h2>
+<a type="button" class="btn btn-primary" href="#5wh">Width & Heigh</a>
+<a type="button" class="btn btn-primary" href="#5bd">Border</a>
+<a type="button" class="btn btn-primary" href="#5dis">Display</a>
+
+
+<br id="5wh"><br>
+<pre>
+    <b>Width & Height</b>
+    
+    width နဲ့ height ကို block element ဂုဏ်ရည်ရှိတဲ့ elementတိုင်း  သုံးလို့ရသည် Inline ဂုဏ်ရည်ရှိ လျှင်သုံးလို့မရပါ။ 
+    width ကို 100% ယူလို့ရပေမဲ့ height ကို 100% ယူလို့မရပါ
+    div တစ်ခုကို 300px width ယူ ပြီး height ကို auto သတ်မှတ်လို့ရသည် ပုံစံကြသော box လေးတစ်ခုထွက်လာမည်ဖြစ်ပါသည်
+    
+    Example 
+    .firstdiv{ <span id="5bd"></span>
+        background-color: rgba(225, 27, 127, 1);
+        width: 200px;
+        height: 100px;
+        color: aliceblue; 
+        font-size: 20px;
+     }
+
+     <b>Border</b>
+     
+     border:5px soild blue;
+     border-color:blue;
+     border-style:soid;
+     
+     Border-style
+     border: solid;
+     border: dotted;
+     border: double;
+     border: dashed;
+     border: inset;
+     border: outset; <span id="5br"></span>
+
+     border-left: 2px solid black;
+     border-right:
+     border-top:
+     border-bottom:
+   
+
+    <b>Border radius</b>
+    border-radius:5px;                border လေးတွေ လုံးသွားစေရန်သုံး   50% သာပေးလိုက်ရင် circle ဖြစ်သွား  px ရော % ရောပေးလို့ရ 
+    border-radius: 20px;
+                   /* top left & right bottom | left top & right bottom
+    border-radius: 10px 50px;
+                top left | top right| bottom right | bottom left    
+    border-radius: 10px 20px 30px 40px; */
+
+    border-radius:50%;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px; <span id="5dis"></span>
+    border-bottom-left-radius: 30px;
+
+    <b>Display</b>
+    display:none;
+    display:inline;
+    display:block;
+</pre>
+<hr>
+<br id="6"><br>
+<h2>Position & Flex</h2>
+<a type="button" class="btn btn-primary" href="#6po">Relative and Absolute</a>
+<a type="button" class="btn btn-primary" href="#6mp">Margin and padding</a>
+<a type="button" class="btn btn-primary" href="#6fx">Flex</a>
+<a type="button" class="btn btn-primary" href="#6z">z-index</a>
+
+
+
+<br id="6po"><br>
+<pre>
+    <b>Relative and Absolute </b>
+    position:relative;                                                   ပေးပြီးဘေးဘယ်ညာရွှေ့လို့ရ
+    position:absolute;                                                   document flow ကနေထွက်သွားစေပြီးနေရာရွှေ့လို့ရ 
+
+    left,right,top,bottom 
+    <span id="6mp"></span>
+    parent မှာ position relative ပေးပြီး child မှာ position absolute သုံးလိုက်ရင်  absolute က parent မှာဘဲ အလုပ်လုပ် document အထိ မလုပ်ဘဲ။ ဒီနည်းက အသုံးများ
+
+    <b>Margin and padding</b>
+
+    <b>Margin</b>                                                     Margin ကို block element တစ်ခုကို ဘေးကတွန်းရန်သုံး
+    margin: 20px;
+    margin-left: 50px; 
+    margin-right: 50px; 
+    margin-top: 50px; 
+    margin-bottom: 50px;                                              for all side
+    margin: 20px 10px;                                                top&bottom left&right
+    margin: 10px 10px 10px 10px;                                      top right bottom left 
+
+    <b>Padding</b>
+    padding:20px;                                                    for all side
+    padding:10px 10px;                                               top&bottom left&right
+    padding:10px 10px 10px 10px;                                     နာရီလက်တံ အတိုင်းသွား    top right bottom left
+    padding-left:
+    padding-right:
+    padding-top: <span id="6fx"></span>
+    padding-bottom:                                                  
+
+    <b>Flex</b>
+    Flex ကို parent မှာပေးရပြီး သားသမီးမှာ သက်ရောက်စေပါတယ်။ 
+    display: flex;
+    justify-content: center;<span id="6z"></span>                                        horizontal center ချရန်သုံး
+    align-items: center;                                             vertical center ချရန်သုံး 
+
+    <b>Z-index</b>
+    z-index:1;                                                          က layer တွေစဉ်
+    z-index:2;                                                           
+
+</pre>
 </div>
 </body>
 </html>
