@@ -13,25 +13,35 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#1">cssIntro</a>
+          <a class="nav-link" href="#1">CssIntro</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#2">externalStyle</a>
+          <a class="nav-link" href="#2">Selectors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#3">textstyle</a>
+          <a class="nav-link" href="#3">TextStyle</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#4">divDesign</a>
+          <a class="nav-link" href="#4">DivDesign</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#5">fontstyle</a>
+          <a class="nav-link" href="#5">FontStyle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#6">BorderStyle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#7">PseudoClass</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#8">PseudoElement</a>
         </li>
     </div>
   </nav>
   
         <div class="container">
-          <br id="1"><br><br>
+        
+          <br id="1"><br>
           <h2>Cssintro</h2>
           <pre>
 CSS 3 style 
@@ -39,49 +49,75 @@ CSS 3 style
 2. external style   
 3. inline style
 
-selectors{
-    property:value;
-    property:value;
-}
+Internal style
+Internal Style ကို head tag နှင့် body tag ကြားမှာ style tag ဖြင့်ထည့်ရေးပါတယ်
+<!-- example    <style type=text/css> p{color:blue;}</style> -->
+type=text/css  ကိုထည့်ရေးသင့်ပါတယ်။
 
-Internal style must be between head and body 
-type=text/css must be include in link tag
-selector{
-    properties:"When space"; 
-}
+Inline style 
+Inline style ကို html tag တွေထဲမှာ attribute အဖြစ်ရေးလေ့ရှိပါတယ်။
+<!-- <p style="color:blue;"></p> -->
 
-Inline use style="color:red;" in html tag as attribute
+External Style ကိုတော့ head tag ထဲမှာ ထည့်ရေးလေ့ရှိပါတယ်။
+<!-- <head>
+    <title>CSS intro</title>
+    <link rel="stylesheet" href="cssintro.css" type="text/css" />  
+</head> -->
+rel="stylesheet" ကို link ထဲမှာ မဖြစ်မနေ ထည့်ပေးရပါမယ်
+type="text/css" က မလိုအပ်ပေမဲ့ လေးစားမှုနှင့်ထည့်ပေးရပါမယ် 
 
-This is comment in css 
-override is worked in only same properties and code work as waterfall 
-External Style must be between head tag and body tag 
-type="text/css" should add in link tag
-rel="stylesheet" must add in link tag
-<link rel="stylesheet" href="cssintro.css" type="text/css" />  */
+Override is worked in only same properties and code work as waterfall 
+Code တွေက waterfall အတိုင်း အလုပ်လုပ်ပြီး   တူညီတဲ့ selector သုံးလိုက်ပါက override ဖြစ်သွားစေပါတယ်
+<!-- <style type="text/css">
+p{
+    color:red;
+}</style>
 
+<p style="color:blue;"></p> --> -->
+P ကို အစက red သတ်မှတ်ထားပေမဲ့ အောက်မှာထပ်ပြီး color style ထပ်ပေးလိုက်လို့  red ကနေ override ဖြစ်သွားတာဖြစ်ပါတယ်။
 
+CSS တွင် ကွန်မန့်ပိတ်နည်း အစ /*   အဆုံး */
+<!-- This is comment in css  -->
+</pre>
+<hr>
+<br id="2"><br>
+<h2>Selectors</h2>
+<pre>
+Selectors
 
-          </pre>
-          <hr>
-          <br id="2"><br><br>
-          <h2>ExternalStyle</h2>
-          <pre>
 Element Selector
+p, div....etc
+HTML tag name ကို တိုက်ရိုက်ခေါ်သုံးတာကို Element Selector လို့ခေါ်တယ်
+p{
+    font-size:20px;
+}
 
 Single Selector
-Group Selecors = p , p 
+တစ်ခုတည်း select လုပ်ထားတာကို ခေါ်ပါတယ်
+p{
+    color:red;
+}
 
-Group Selectors 
+Group Selecors (p , p)
+တူညီ တဲ့ style ရှိစေချင်တာကြောင့် အတူ တကွ select လုပ်ပေးတာကို Group Selector လို့ခေါ်ပါတယ်။
+p, p {
+    color:red;
+}
 h1, h2, h3, h4{
     color:burlywood;
 }
 
 ID selectors 
-#car, #ship{
+ID ကနေ select လုပ်။ # sign လေးက ID အတွက် မဖြစ်မနေ လိုအပ်
+#car{
     color:crimson;
+}
+#car1 , #car2{
+    color:black;
 }
 
 Class Selectors
+Class ကနေ select လုပ်။ . sign လေးက Class အတွက် မဖြစ်မနေ လိုအပ်
 .ph {
     color:skyblue
 }
@@ -92,75 +128,6 @@ Class Selectors
     color:darkgreen;
 }
 
-# is used to call id selector
-. is used to call class selector
-          </pre>
-          <hr>
-          <br id="3"><br><br>
-          <h2>TextStyle</h2>
-          <pre>
-.textalign{
-    text-align: right;
-    text-align: left; 
-    text-align: center; 
-    text-align: justify;
-}
-.textdecoration{
-    <!-- text-decoration: underline; <u> -->
-    <!-- text-decoration: line-through;  <del>  -->
-    text-decoration: overline;    
-    text-decoration: none; 
-}
-.textline{
-    letter-spacing: 5px; 
-    line-height: 50px; 
-    line-height: 3; 3 for 3 world line 
-    line-height: 300%; /*100% is default . So 300% = 3 
-}
-.textshadow{
-    horizontal vertical blur color
-    text-shadow: 5px 5px 5px crimson;
-}
-          </pre>
-<hr>
-<br id="4"><br><br>
-<h2>DivDesign</h2>
-<pre>
-  background
-
-   divကို အနံအလျားသတ်မှတ်ရန်သုံး 
-   width:20px;
-   height:20px;
-
-   opactiy:1;                       အလင်းအမှောင်ချိန်ရန်သုံး
-   
-   background:red;                  solid color, gradient color, image တွေသုံးလို့ရ              
-   background-color                 solid color
-   background-image:url();          image
-
-   background-repeat: no-repeat;    ပုံတွေမထပ်ရန်သုံး
-   background-repeat: repeat-x;
-   background-repeat: repeat-y;
-
-   (background-color)               က soild color တစ်ခုရ  gradient မှာ မရ
-   (background)                     က soild ရော gradient ရော ရ
-   (background-image)               က gradient ဘဲရ soild မရ 
-
-   Liner Gradient 
-   background: linear-gradient(blue,orange,cyan,red); 
-
-   Linear-Gradient မှာ % ရော degree ရောရ 
-   background: linear-gradient(180deg, red,green); with degree 
-   background:linear-gradient(red 40%, cyan 40%);  with % (after 80% blur start to appear)
-
-   Radial Gradient 
-   background:radial-gradient(crimson, cyan);    
-   Radial-Gradient မှာ % တစ်ခုဘဲရ 
-   background:radial-gradient(crimson, cyan); 
-
-   Image မှာ gradient ထည့်တာ   Background and Background-image ကိုသုံးရ  background-color မှာမရ
-   background-image: linear-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
-   background: radial-gradient(red 40%, yellow 50% ) , url(../img/cover/bg2.jpg);
 </pre>
 
 </div>
