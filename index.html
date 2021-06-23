@@ -8,6 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="exam.css">
 </head>
+<style>
+    b{
+        font-size: 20px;
+    }
+    pre{
+        font-size: 18px;
+    }
+</style>
 <body>
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,69 +39,93 @@
           <a class="nav-link" href="#6">Position & Flex</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#7">PseudoClass</a>
+          <a class="nav-link" href="#7">Animation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#8">PseudoElement</a>
+          <a class="nav-link" href="#8">@ signs & usage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#9">Spot</a>
         </li>
     </div>
   </nav>
   
         <div class="container">
+    <p>ဆရာ သင်တဲ့ Theory တွေ အတူတူဘဲ ဆိုပေမဲ့ ကိုယ်နားလည်သလို ထုပ်ထားတဲ့ note တွေမျို့။ ကျနော် note နဲ့တော့ study မလုပ်စေချင်ပါဘူး။ စာမေးပွဲဖြေနေတုန်းသိသလို မသိလိုအချိန်လေးတွေမှာ ဝင်ကြည့်လို့ရအောင် လုပ်ပေးထားတာပါ။ Good luck all</p>
         
           <br id="1"><br>
           <h2>Cssintro</h2>
+<a type="button" class="btn btn-primary" href="#1in">Internal Style</a>
+<a type="button" class="btn btn-primary" href="#1ex">External Style</a>
+<a type="button" class="btn btn-primary" href="#1ex">Inline Style</a>
           <pre>
-CSS 3 style 
+CSS 3 style  <span id="1in"></span>
 1. internal style   
 2. external style   
 3. inline style
 
-<b>Internal style</b>
+<b>Internal style</b> <span id="1ex"></span>
 Internal Style ကို head tag နှင့် body tag ကြားမှာ style tag ဖြင့်ထည့်ရေးပါတယ်
-<!-- example    <style type=text/css> p{color:blue;}</style> -->
+Example    
+&lt;style type=text/css&gt; p{color:blue;}&lt;/style&gt;
 type=text/css  ကိုထည့်ရေးသင့်ပါတယ်။
 
-<b>Inline style</b>
+<b>Inline style</b> 
 Inline style ကို html tag တွေထဲမှာ attribute အဖြစ်ရေးလေ့ရှိပါတယ်။
-<!-- <p style="color:blue;"></p> -->
+Example
+&lt;p style="color:blue;"&gt; &lt;/p&gt;
 
 <b>External Style</b>
 External Style ကိုတော့ head tag ထဲမှာ ထည့်ရေးလေ့ရှိပါတယ်။
-<!-- <head>
-    <title>CSS intro</title>
-    <link rel="stylesheet" href="cssintro.css" type="text/css" />  
-</head> -->
+Example 
+&lt;head&gt;
+&lt;title&gt;CSS intro&lt;/title&gt;
+&lt;link rel="stylesheet" href="cssintro.css" type="text/css" &gt;  
+&lt;/head&gt; 
 rel="stylesheet" ကို link ထဲမှာ မဖြစ်မနေ ထည့်ပေးရပါမယ်
 type="text/css" က မလိုအပ်ပေမဲ့ လေးစားမှုနှင့်ထည့်ပေးရပါမယ် 
 
 Override is worked in only same properties and code work as waterfall 
 Code တွေက waterfall အတိုင်း အလုပ်လုပ်ပြီး   တူညီတဲ့ selector သုံးလိုက်ပါက override ဖြစ်သွားစေပါတယ်
-<!-- <style type="text/css">
+&lt;style type="text/css"&gt;
 p{
     color:red;
-}</style>
+}&lt;/style&gt;
 
-<p style="color:blue;"></p> --> -->
+&lt;p style="color:blue;"&gt;&lt;/p&gt; 
 P ကို အစက red သတ်မှတ်ထားပေမဲ့ အောက်မှာထပ်ပြီး color style ထပ်ပေးလိုက်လို့  red ကနေ override ဖြစ်သွားတာဖြစ်ပါတယ်။
 
 CSS တွင် ကွန်မန့်ပိတ်နည်း အစ /*   အဆုံး */
-<!-- This is comment in css  -->
+&lt;!-- This is comment in css  --&gt;
 </pre>
 <hr>
 <br id="2"><br>
 <h2>Selectors</h2>
-<pre>
+<a type="button" class="btn btn-primary" href="#2">Element Selector</a>
+<a type="button" class="btn btn-primary" href="#2sg">Single Selector</a>
+<a type="button" class="btn btn-primary" href="#2gp">Group Selecors (p , p)</a>
+<a type="button" class="btn btn-primary" href="#2id">ID Selector</a>
+<a type="button" class="btn btn-primary" href="#2cla">Class Selector</a>
+<a type="button" class="btn btn-primary" href="#2ul">Universal selector</a>
+<a type="button" class="btn btn-primary" href="#2as">Attribute Selector</a>
+<a type="button" class="btn btn-primary" href="#2pc">Pseudoclass Selector</a>
+<a type="button" class="btn btn-primary" href="#2pe">Pseudoelement Selector</a>
+<a type="button" class="btn btn-primary" href="#2se">Descendant selector (space)</a>
+<a type="button" class="btn btn-primary" href="#2c">Child Selector (>)</a>
+<a type="button" class="btn btn-primary" href="#2ad">Adjacent Sibling Selector (+)</a>
+<a type="button" class="btn btn-primary" href="#2gs">General Sibling Selector (~)</a>
+
+<pre> 
 Selectors
 
-<b>Element Selector</b>
+<b>Element Selector</b> <span id="2sg"></span>
 p, div....etc
 HTML tag name ကို တိုက်ရိုက်ခေါ်သုံးတာကို Element Selector လို့ခေါ်တယ်
 p{
     font-size:20px;
 }
 
-<b>Single Selector</b>
+<b>Single Selector</b> <span id="2gp"></span>
 တစ်ခုတည်း select လုပ်ထားတာကို ခေါ်ပါတယ်
 p{
     color:red;
@@ -104,14 +136,14 @@ p{
 p, p {
     color:red;
 }
-h1, h2, h3, h4{
+h1, h2, h3, h4{    <span id="2id"></span>
     color:burlywood;
 }
 
 <b>ID selectors</b>
 ID ကနေ select လုပ်။ # sign လေးက ID အတွက် မဖြစ်မနေ လိုအပ်
 #car{
-    color:crimson;
+    color:crimson; <span id="2cla"></span>
 }
 #car1 , #car2{
     color:black;
@@ -125,11 +157,12 @@ Class ကနေ select လုပ်။ . sign လေးက Class အတွက်
 .f20 {
     font-size: 20px;
 }
-.divone, .divtwo{
+.divone, .divtwo{ <span id="2ul"></span>
     color:darkgreen;
 }
 
-<b>Universal Selector</b>
+<b>Universal Selector</b> <span id="2as"></span>
+document တစ်ခုလုံး select လုပ်ရာတွင်သုံးသည်
 *{
    cursor:pointer;
 }
@@ -138,7 +171,7 @@ Class ကနေ select လုပ်။ . sign လေးက Class အတွက်
 input[type="text"]{
     background-color: greenyellow;
     width: 300px;
-    border-radius: 20px;
+    border-radius: 20px; <span id="2pc"></span>
 }
 input[type]{
     color:blue;
@@ -148,28 +181,29 @@ input[type]{
 Pseudoclass selector ရဲ့ sign က ( : )
 :active                                     နှိပ်လိုက်တဲ့အချိန်မှာ style ပြောင်းစေချင်ရင်သုံး 
 :hover                                      mouse တင်လိုက်တဲ့အချိန်မှာ style ပြောင်းစေချင်ရင်သုံး 
-:focus                                      
+:focus                                      input box များတွင် auto cursor ကျစေရန်သုံးသည်
 :visited                                    သွားပြီးသား နှိပ်ပြီးသွား link တွေ style ပြောင်းစေချင်ရင်သုံး 
 :first-child                                parent အထဲက first child ကို select လုပ်
 :last-child                                 parent အထဲက last child ကို select လုပ်
 :first-of-type                              parent အထဲက first ပထမဆုံး သက်ဆိုင်ရာ Type ကို select လုပ်
 :last-of-type                               parent အထဲက last နောက်ဆုံး သက်ဆိုင်ရာ Type ကို select လုပ်
-
-eg a:active, div1:first-child 
+:nth-of-type                                n ကြိမ်မြောက် type
+:nth-child                                  n ကြိမ်မြောက် child 
 
 :nth-of-type() vs :nth-child() . They look same but they are different.
-nth-last-child က select လုပ်ထားတဲ့ type ဖြစ်တဲ့ .div1 နဲ့ ရေတွက်ပြီး
-:nth-child() ကတော့ ရှိမျှကို child အဖြစ်သတ်မှတ်ပြီး ရေတွက်ပါတယ်
+:nth-of-type() က type() ထဲအရှိ အမျိုးအစားကိုဘဲ ရေတွက်ပြီး
+:nth-child() ကတော့ ရှိမျှကို child အဖြစ်သတ်မှတ်ပြီး ရေတွက်ပါတယ် <span id="2pe"></span>
 
-exam မှာ PseudoClass : or PseudoElement :: လားဆိုပြီးခွဲခိုင်းပါမယ် 
+Example a:active, div1:first-child 
+
 
 <b>PseudoElement</b>
 ::first-line                                ပထမဆုံးစာကြောင်း select လုပ် style ပြောင်းစေချင်ရင်သုံး 
 ::first-letter                              ပထမဆုံး အစစာလုံး select လုပ် style ပြောင်းစေချင်ရင်သုံး
-::before{                                   select လုပ်ထားတဲ့ စာပိုဒ် အစ 
+::before{                                   select လုပ်ထားတဲ့ စာပိုဒ် အစ content or style ထည့်ရန်သုံး
     content: ""; 
 }
-::after{                                    select လုပ်ထားတဲ့ စာပိုဒ် နောက်ဆုံး
+::after{                                    select လုပ်ထားတဲ့ စာပိုဒ် နောက်ဆုံး content or style ထည့်ရန်သုံး
     content: ""; 
 }
 ::selection                                 mouse select ဆွဲရင် အရောင်ပြောင်းရန်သုံး                                 
@@ -182,24 +216,24 @@ There are four different combinators in CSS:
 
 descendant selector (space)
 child selector (>)
-adjacent sibling selector (+)
+adjacent sibling selector (+) <span id="2se"></span>
 general sibling selector (~)
 
-<b>Descendant selector (space)</b>
+<b>Descendant selector (space)</b> 
 The descendant selector matches all elements that are descendants of a specified element.
-<!-- The following example selects all <p> elements inside <div> elements: 
+The following example selects all &lt;p> elements inside &lt;div> elements: 
     div p {
             background-color: yellow;
-          }
+          } <span id="2c"></span>
 
-    .bank .money .currency{
+    .bank .money .currency{ 
             color:blueviolet;
           }   
--->
+
 
 <b>Child Selector (>)</b>
 The child selector selects all elements that are the children of a specified element.
-<!-- The following example selects all <p> elements that are children of a <div> element: -->
+The following example selects all &lt;p> elements that are children of a &lt;div> element:
 Example
 div > p {
   background-color: yellow;
@@ -209,34 +243,42 @@ Descendant selector (space) နှင့် Child Selector (>) က မတူပ�
 Descendant selector က select ယူထားတဲ့ သူအောက်မှာ ရှိတဲ့ element ကိုအကုန်ယူမှာပါ 
 Child Selector ကတော့ သူအောက်တည့်တည့်က child ကိုဘဲ ယူမှာပါ
 
-<!-- eg 
-<div>
-    <p>I am p1</p>
-    <span><p>I am p2</p></span>
-</div> -->
-
-div p{color:red;}                div အောက်က I am p1 ရော I am p2ပါ အကုန် နီသွားမှာပါ span tag ထဲက p ပါနီမှာပါ
+Example
+&lt;div>
+&lt;p>I am p1&lt;/p>
+&lt;span>&lt;p>I am p2&lt;/p>&lt;/span>
+&lt;/div> -->
+div p{color:red;}                div အောက်က I am p1 ရော I am p2ပါ အကုန် နီသွားမှာပါ span tag ထဲက p ပါနီမှာပါ <span id="2ad"></span>
 div > p{color:red;}              div အောက်တည့်တည့်က I am p1 တစ်ခုဘဲ နီပြီး I am p2 တော့ နီမှာ မဟုတ်ပါဘူး 
 
 <b>Adjacent Sibling Selector (+)</b>
 The adjacent sibling selector is used to select an element that is directly after another specific element.
 Sibling elements must have the same parent element, and "adjacent" means "immediately following".
-<!-- The following example selects the first <p> element that are placed immediately after <div> elements: -->
+The following example selects the first &lt;p> element that are placed immediately after &lt;/div> elements:
 
-Example
-div + p {
+Example 
+div + p { <span id="2gs"></span>
   background-color: yellow;
 }
 div ဘေးနားကပ်ရပ် ကောင်ကိုဘဲ  yellow ဝင်စေမှာဖြစ်မှာပါ
 
 <b>General Sibling Selector (~)</b>
 The general sibling selector selects all elements that are next siblings of a specified element.
-<!-- The following example selects all <p> elements that are next siblings of <div> elements:  -->
+The following example selects all &lt;p> elements that are next siblings of &lt;div> elements: 
 Example
 div ~ p {
   background-color: yellow;
 }
 div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြစ်ပါတယ်
+
+div + p {background-color:yellow;}                            div ဘေးနားကပ်ရပ်မှာ ရှိတဲ့ p ကို + သုံးပြီး select လုပ်
+&lt;div>&lt;/div>  &lt;p>&lt;/p>                                 p tag  နေရာတွင် yellow ဝင် 
+&lt;div>&lt;/div>  &lt;b>&lt;/b> &lt;p>&lt;/p>                         div ရဲ့ ဘေးကပ်ရပ်တွင် p မရှိပါ b သာရှိသည်။ div ဘေးကပ်ရပ်တွင်မဟုတ်သောကြောင့် p tag တွင် yellow မဝင်တော့ပါ    
+
+div ~ p {background-color:red;}                               div ရဲ့ ဘေးမှာ ရှိတဲ့ p တွေအကုန်select လုပ်
+&lt;div>&lt;/div> &lt;b>&lt;/b> &lt;p>&lt;/p> &lt;i>&lt;/i> &lt;p>&lt;/p>          div ရဲ့ ဘေးမှာ b p i p ဖြစ်နေသောလည်း  p tag တွေ red ဖြစ်သွားမည်ဖြစ်ပါသည်။
+
+
 </pre>
 
 <hr>
@@ -258,28 +300,28 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
 <br id="textalign"><br id="textdec">
 <pre>
     
-    <b>Text-align</b>
+    <b>Text-align</b>                                                  Inline or text တွေကို နေရာရွှေ့ရာတွင်သုံးသည်
     text-align: right;
     text-align: left;
     text-align: center; 
-    text-align: justify;
+    text-align: justify;                                               justify က text တွေကို ဘေးဘယ်ညာ auto ချိန်ပေးသည်။
     <span id="textdec"></span>
-    <b>Text-decoration</b>
-    text-decoration: underline; 
+    <b>Text-decoration</b>                                             Text တွေကို u tag ,del tag တွေအစား သုံးသည်။
+    text-decoration: underline;                                 
     text-decoration: line-through;  <span id="lsp"></span>
     text-decoration: overline;      <span id="lh"></span>
-    text-decoration: none; 
+    text-decoration: none;                                             a tag များ auto underline ဝင်နေတာကို none ပေးပြီးဖျောက်ကြသည်
     
     <b>Letter-spacing</b>
-    letter-spacing: 5px;
+    letter-spacing: 5px;                                               စာလုံးများအကြား spacing( A   B    C)
     
-    <b id="ts">Line-height</b>
+    <b id="ts">Line-height</b>                                         စာကြောင်းများအပေါ်အောက်ချိန်ခြင်း
     line-height: 50px; 
     line-height: 3; 3 for 3 world line
     line-height: 300%; 100% is default  300% = 3 
    
     
-    <b id="fs">Text-shadow</b>
+    <b id="fs">Text-shadow</b>                                         Text များတွင် shadow ထည့်ရာတွင်သုံးသည်
     text-shadow: 5px 5px 5px crimson;
                   h   v   b     c      horizontal vertical blur color 
 
@@ -310,8 +352,8 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
         font-family: abc;                       @font-faceထဲက နာမည်ပေးထားတာကိုခေါ်သုံးရ 
     }
     <span id="fw"></span>
-    sans-serif                        က font name မဟုတ် unit တစ်ခုသာဖြစ်
-    font-family: inherit;             inherit က parent ဆီကနေ font ကိုယူသုံး
+    sans-serif                                  က font name မဟုတ် unit တစ်ခုသာဖြစ်
+    font-family: inherit;                       inherit က parent ဆီကနေ font ကိုယူသုံး
      
     <b>Font-weight</b> <span id="ti"></span>
     font-weight: bold;                font တွေ စာလုံး ထူမထူ စေရန်သုံး  100 to 900 အထိရှိ   bold တို့ light တို့လည်းပေးလို့ရ 
@@ -492,7 +534,10 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
 <a type="button" class="btn btn-primary" href="#6po">Relative and Absolute</a>
 <a type="button" class="btn btn-primary" href="#6mp">Margin and padding</a>
 <a type="button" class="btn btn-primary" href="#6fx">Flex</a>
-<a type="button" class="btn btn-primary" href="#6z">z-index</a>
+<a type="button" class="btn btn-primary" href="#6z">Z-index</a>
+<a type="button" class="btn btn-primary" href="#6bz">Box-sizing</a>
+<a type="button" class="btn btn-primary" href="#6fl">Float</a>
+
 
 
 
@@ -532,11 +577,139 @@ div ဘေးနားက အကုန် yellow ဝင်စေမှာဖြ�
     justify-content: center;<span id="6z"></span>                                        horizontal center ချရန်သုံး
     align-items: center;                                             vertical center ချရန်သုံး 
 
-    <b>Z-index</b>
+    <b>Z-index</b> <span id="6bs"></span>
     z-index:1;                                                          က layer တွေစဉ်
-    z-index:2;                                                           
+    z-index:2;     
+    
+    <b>Boxsizing</b>  <span id="6fl"></span>
+    box-sizing: border-box;                                             elements တွေကို box အဖြစ်ပြောင်းရန်သုံး universal selector နှင့်တွဲသုံးလေ့ရှိ
+    *{
+        box-sizing: border-box;  
+    }
+
+    <b>Float</b>
+    The float property specifies whether an element should float to the left, right, or not at all.
+    Note: Absolutely positioned elements ignore the float property!
+    Note: Elements next to a floating element will flow around it. To avoid this, use the clear property or the clearfix hack (see example at the bottom of this page).
+
+    float:left, right, none;
+    clear:left, right, both;
 
 </pre>
+
+<hr>
+<br id="7"><br>
+<h2>Animation</h2>
+<a type="button" class="btn btn-primary" href="#7an">Animation</a>
+<a type="button" class="btn btn-primary" href="#7cur">Cursor</a>
+<a type="button" class="btn btn-primary" href="#7cur">Transition</a>
+<a type="button" class="btn btn-primary" href="#7tf">Transform</a>
+<a type="button" class="btn btn-primary" href="#7vp">Vendor-prefixed</a>
+<br id="7an"><br>
+<pre>
+    <b>Animation</b>
+animation{
+animation-name: myrotate;
+    animation-duration: 7s;                                             မြန်မြန်မသွားအောင်သုံး
+    transform-origin: bottom;                                           အောက်ခြေကနေလည်အောင်သုံး
+    animation-iteration-count: infinite;                                loop ပါတ်နေသလို လည်အောင်သုံး
+    animation-timing-function: linear;                                  ပြေပြေပြစ်ပြစ်လည်အောင်သုံး
+}
+
+@keyframes myrotate{                                                    myrotate ဆိုတဲ့ name ပေးလိုက်ပြီး အလုပ်လုပ်မဲ့ပုံစံကို ဖော်ပြ
+    from{
+        transform: rotate(0deg);                                        rotate က လည်မယ်ဆိုတာကိုပြော
+    }
+
+    to{
+        transform: rotate(360deg);        <span id="7cur"></span>                              
+    }
+}   <span id="7tran"></span>
+ 
+<b>Cursor</b>
+cursor: pointer;                                                        က mouse တင်လိုက်လျှင် လက်ပုံလေးပြောင်းရန်သုံး   pointer အပြင်တခြားသုံးလို့ရတဲ့ value လေးတွေလည်းရှိ
+
+<b>Transition</b> <span id="7tf"></span>
+transition: 1s  ease;                                                   transition က smooth ဖြစ်အောင်သုံး   ease ထည့်ရင်ပိုသိသာ 
+
+<b>Transform</b>
+transform: rotate();                                                    rotate က element ကိုရွှေ့တဲ့နေရာမှာသုံး
+transform: rotate(90deg); 
+transform: rotateX(50deg); <span id="7vp"></span>
+transform: rotateY(50deg);
+transform: scale(0.5);                                                  scale က အကြီးအချဲ့လုပ်တဲ့နေရမှာသုံး
+
+<b>Vendor-prefixed</b>
+/* vendor-prefixed properties  လို့ခေါ်                                     appearance =   (>) လေးတွေဖျောက်ဖို့သုံး 
+-webkit-appearance: none;  
+-moz-appearance: none; 
+appearance: none;
+
+-webkit-                Chrome Safri Opera
+-ms-                    Internet Explorer
+-o-                     Opera
+-moz-                   firefox
+
+</pre>
+<hr>
+<br id="8"><br>
+<h2>@ signs & usage</h2>
+<a type="button" class="btn btn-primary" href="#8im">@Import</a>
+<a type="button" class="btn btn-primary" href="#8im">@font-face</a>
+<a type="button" class="btn btn-primary" href="#8ani">@keyframes</a>
+<a type="button" class="btn btn-primary" href="#8me">@Media</a>
+
+
+
+
+
+<br id="8im"><br>
+<pre>
+    <b>@import</b>
+    @import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');                          Google font api ချိတ်ရာတွင်သုံးသည်
+
+    <b>@font-face</b>
+    @font-face{
+        font-family: abc;  
+        src:local("Stick-Regular"),url(../libs/fonts/stick/Stick-Regular.ttf) format('woff');            font local integrate လုပ်သုံးရာတွင်သုံးသည်
+        /* format('woff') does not need anymore */ <span id="8ani"></span>
+    }
+
+    <b>@keyframes</b>                                                                                     Animation သတ်မှတ်ပြီး name ထည့်ရာတွင်သုံးသည်။ myrotate သည် name ဖြစ်သည်။
+    @keyframes myrotate{
+        from{
+            transform: rotate(0deg);
+        }
+    
+        to{
+            transform: rotate(360deg); <span id="8me"></span>
+        }
+    }
+
+    <b>@Media</b>                                                                                        Responsitive design လုပ်ရန်သုံးသည်  
+    @media (max-width:600px) {
+        h1{
+            font-size: 25px;
+            color: blue;
+        }
+    
+        p.text{
+            color:blue;
+        }
+    }
+</pre>
+<br id="9"><br>
+<h2>Spot</h2>
+<a type="button" class="btn btn-primary" href="#2pc">Pseudoclass & Element</a>
+<a type="button" class="btn btn-primary" href="#8">@ signs</a>
+
+<br><br>
+<pre>
+    exam မှာ PseudoClass : or PseudoElement :: လားဆိုပြီးခွဲခိုင်းပါမယ် 
+    @signs တွေမေးနိုင်ပါတယ်
+</pre>
+<a href="https://www.facebook.com/aungmyoactulizer" type="button" class="btn btn-primary" style="background-color: #FF94CC; border-color: #FF94CC;">Click here to kiss me!</a>
+<br><br>
 </div>
 </body>
 </html>
